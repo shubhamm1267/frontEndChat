@@ -26,7 +26,7 @@ export class AppComponent {
   isUsernameSet: boolean = false;
 
   ngOnInit() {
-    this.socket = new WebSocket('ws://localhost:3000');
+    this.socket = new WebSocket('wss://backendchat-o5bi.onrender.com/ws');
 
     this.socket.onmessage = (event:any) => {
       let data = JSON.parse(event.data);
